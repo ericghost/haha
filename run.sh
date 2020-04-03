@@ -32,13 +32,13 @@ cd /usr/src/$yourdir/client
 wget https://raw.githubusercontent.com/ericghost/kcpudp/master/start.bat
 wget https://raw.githubusercontent.com/ericghost/kcpudp/master/stop.bat
 wget https://raw.githubusercontent.com/ericghost/kcpudp/master/kcptun_client.json
-wget https://github.com/ericghost/kcpudp/master/speederv2.exe
-wget https://github.com/ericghost/kcpudp/master/client_windows_amd64.exe
+wget https://github.com/ericghost/kcpudp/raw/master/speederv2.exe
+wget https://github.com/ericghost/kcpudp/raw/master/client_windows_amd64.exe
 
 cd /usr/src/$yourdir
 wget https://raw.githubusercontent.com/ericghost/kcpudp/master/kcptun_server.json
-wget https://github.com/ericghost/kcpudp/master/speederv2_amd64
-wget https://github.com/ericghost/kcpudp/master/server_linux_amd64
+wget https://github.com/ericghost/kcpudp/raw/master/speederv2_amd64
+wget https://github.com/ericghost/kcpudp/raw/master/server_linux_amd64
 chmod +x speederv2_amd64 server_linux_amd64
 
 #设置参数
