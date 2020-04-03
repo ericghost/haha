@@ -29,13 +29,13 @@ read -p "请输入数字:" udpspeederport
 mkdir /usr/src/$yourdir
 mkdir /usr/src/$yourdir/client
 cd /usr/src/$yourdir/client
-wget https://raw.githubusercontent.com/atrandys/kcptun_and_udpspeeder/master/start.bat
-wget https://raw.githubusercontent.com/atrandys/kcptun_and_udpspeeder/master/stop.bat
-wget https://raw.githubusercontent.com/atrandys/kcptun_and_udpspeeder/master/kcptun_client.json
+wget https://raw.githubusercontent.com/ericghost/kcpudp/master/start.bat
+wget https://raw.githubusercontent.com/ericghost/kcpudp/master/stop.bat
+wget https://raw.githubusercontent.com/ericghost/kcpudp/master/kcptun_client.json
 cd /usr/src/$yourdir
-wget https://raw.githubusercontent.com/atrandys/kcptun_and_udpspeeder/master/kcptun_server.json
-wget https://github.com/atrandys/kcptun_and_udpspeeder/raw/master/speederv2_amd64
-wget https://github.com/atrandys/kcptun_and_udpspeeder/raw/master/server_linux_amd64
+wget https://raw.githubusercontent.com/ericghost/kcpudp/master/kcptun_server.json
+wget https://github.com/ericghost/kcpudp/master/speederv2_amd64
+wget https://github.com/ericghost/kcpudp/master/server_linux_amd64
 chmod +x speederv2_amd64 server_linux_amd64
 
 #设置参数
@@ -50,7 +50,7 @@ sed -i "s/your_server_port/$port/" /usr/src/$yourdir/kcptun_server.json
 sed -i "s/kcptun_server_port/$kcptunport/" /usr/src/$yourdir/kcptun_server.json
 
 #启动服务
-nohup ./speederv2_amd64 -s -l0.0.0.0:$udpspeederport -r127.0.0.1:$port -k "atrandys" -f2:4 --mode 0 -q1 >speeder.log 2>&1 &
+nohup ./speederv2_amd64 -s -l0.0.0.0:$udpspeederport -r127.0.0.1:$port -k "ericvm" -f2:4 --mode 0 -q1 >speeder.log 2>&1 &
 nohup ./server_linux_amd64 -c ./kcptun_server.json >kcptun.log 2>&1 &
 
 #写入开机自启
@@ -61,7 +61,7 @@ cat > /etc/rc.d/init.d/kcpandudp<<-EOF
 #chkconfig: 2345 80 90
 #description:kcpandudp
 cd /usr/src/$yourdir
-nohup ./speederv2_amd64 -s -l0.0.0.0:$udpspeederport -r127.0.0.1:$port -k "atrandys" -f2:4 --mode 0 -q1 >speeder.log 2>&1 &
+nohup ./speederv2_amd64 -s -l0.0.0.0:$udpspeederport -r127.0.0.1:$port -k "ericvm" -f2:4 --mode 0 -q1 >speeder.log 2>&1 &
 nohup ./server_linux_amd64 -c ./kcptun_server.json >kcptun.log 2>&1 &
 EOF
 
@@ -71,7 +71,7 @@ chkconfig kcpandudp on
 else 
 cat >> /etc/rc.d/init.d/kcpandudp<<-EOF
 cd /usr/src/$yourdir
-nohup ./speederv2_amd64 -s -l0.0.0.0:$udpspeederport -r127.0.0.1:$port -k "atrandys" -f2:4 --mode 0 -q1 >speeder.log 2>&1 &
+nohup ./speederv2_amd64 -s -l0.0.0.0:$udpspeederport -r127.0.0.1:$port -k "ericvm" -f2:4 --mode 0 -q1 >speeder.log 2>&1 &
 nohup ./server_linux_amd64 -c ./kcptun_server.json >kcptun.log 2>&1 &
 EOF
 
