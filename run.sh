@@ -29,16 +29,16 @@ read -p "请输入数字:" udpspeederport
 mkdir /usr/src/$yourdir
 mkdir /usr/src/$yourdir/client
 cd /usr/src/$yourdir/client
-wget https://raw.githubusercontent.com/ericghost/kcpudp/master/start.bat
-wget https://raw.githubusercontent.com/ericghost/kcpudp/master/stop.bat
-wget https://raw.githubusercontent.com/ericghost/kcpudp/master/kcptun_client.json
-wget https://github.com/ericghost/kcpudp/raw/master/speederv2.exe
-wget https://github.com/ericghost/kcpudp/raw/master/client_windows_amd64.exe
+wget https://raw.githubusercontent.com/ericghost/haha/master/start.bat
+wget https://raw.githubusercontent.com/ericghost/haha/master/stop.bat
+wget https://raw.githubusercontent.com/ericghost/haha/master/kcptun_client.json
+wget https://github.com/ericghost/haha/raw/master/speederv2.exe
+wget https://github.com/ericghost/haha/raw/master/client_windows_amd64.exe
 
 cd /usr/src/$yourdir
-wget https://raw.githubusercontent.com/ericghost/kcpudp/master/kcptun_server.json
-wget https://github.com/ericghost/kcpudp/raw/master/speederv2_amd64
-wget https://github.com/ericghost/kcpudp/raw/master/server_linux_amd64
+wget https://raw.githubusercontent.com/ericghost/haha/master/kcptun_server.json
+wget https://github.com/ericghost/haha/raw/master/speederv2_amd64
+wget https://github.com/ericghost/haha/raw/master/server_linux_amd64
 chmod +x speederv2_amd64 server_linux_amd64
 
 #设置参数
