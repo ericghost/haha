@@ -53,7 +53,7 @@ sed -i "s/your_server_port/$port/" /usr/src/$yourdir/kcptun_server.json
 sed -i "s/kcptun_server_port/$kcptunport/" /usr/src/$yourdir/kcptun_server.json
 
 #启动服务
-nohup ./speederv2_amd64 -s -l0.0.0.0:$udpspeederport -r127.0.0.1:$port -k "ericvm" -f1:3,2:4,8:6,20:10 --mode 0 -q1 >speeder.log 2>&1 &
+nohup ./speederv2_amd64 -s -l0.0.0.0:$udpspeederport -r127.0.0.1:$port -k "ericvm" -f2:4,20:10 --mode 0 -q1 >speeder.log 2>&1 &
 nohup ./server_linux_amd64 -c ./kcptun_server.json >kcptun.log 2>&1 &
 
 #写入开机自启
@@ -64,7 +64,7 @@ cat > /etc/rc.d/init.d/kcpandudp<<-EOF
 #chkconfig: 2345 80 90
 #description:kcpandudp
 cd /usr/src/$yourdir
-nohup ./speederv2_amd64 -s -l0.0.0.0:$udpspeederport -r127.0.0.1:$port -k "ericvm" -f1:3,2:4,8:6,20:10 --mode 0 -q1 >speeder.log 2>&1 &
+nohup ./speederv2_amd64 -s -l0.0.0.0:$udpspeederport -r127.0.0.1:$port -k "ericvm" -f2:4,20:10 --mode 0 -q1 >speeder.log 2>&1 &
 nohup ./server_linux_amd64 -c ./kcptun_server.json >kcptun.log 2>&1 &
 EOF
 
@@ -74,7 +74,7 @@ chkconfig kcpandudp on
 else 
 cat >> /etc/rc.d/init.d/kcpandudp<<-EOF
 cd /usr/src/$yourdir
-nohup ./speederv2_amd64 -s -l0.0.0.0:$udpspeederport -r127.0.0.1:$port -k "ericvm" -f1:3,2:4,8:6,20:10 --mode 0 -q1 >speeder.log 2>&1 &
+nohup ./speederv2_amd64 -s -l0.0.0.0:$udpspeederport -r127.0.0.1:$port -k "ericvm" -f2:4,20:10 --mode 0 -q1 >speeder.log 2>&1 &
 nohup ./server_linux_amd64 -c ./kcptun_server.json >kcptun.log 2>&1 &
 EOF
 
