@@ -1,10 +1,8 @@
 #!/bin/bash
 
 #    "========================="
-#    " 介绍：适用于CentOS7"
-#    " 作者：atrandys"
-#    " 网站：www.atrandys.com"
-#    " Youtube：atrandys"
+#    " 介绍：适用于CentOS7+"
+#    " 作者：Eric"
 #    "========================="
 
 #开始
