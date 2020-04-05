@@ -5,7 +5,7 @@
 "crypt": "salsa20",
 "mode": "fast2",
 "mtu": 1350,
-"sndwnd": 256,
+"sndwnd": 512,
 "rcvwnd": 2048,
 "datashard": 10,
 "parityshard": 3,
