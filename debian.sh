@@ -59,8 +59,8 @@ nohup ./server_linux_amd64 -c ./kcptun_server.json >kcptun.log 2>&1 &
 EOF
 
 chmod +x /etc/init.d/kcpandudp
-chkconfig --add kcpandudp
-chkconfig kcpandudp on
+sysv-rc-conf --add kcpandudp
+sysv-rc-conf kcpandudp on
 else 
 cat >> /etc/init.d/kcpandudp<<-EOF
 cd /usr/src/$yourdir
