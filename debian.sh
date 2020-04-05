@@ -6,6 +6,12 @@ echo "========================="
 echo " 介绍：适用于Debian9+"
 echo "========================="
 echo
+echo
+echo "========================="
+echo " 介绍：安装环境"
+echo "========================="
+echo
+apt-get install sysv-rc-conf
 echo "给即将安装的软件设置一个文件夹名称,新建文件夹的目录在/usr/src/下"
 echo "如果多开，文件夹名称不能相同，举例可设置为game1、game2"
 read -p "请输入文件夹名称:" yourdir
