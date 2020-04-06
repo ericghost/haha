@@ -10,7 +10,7 @@
 "datashard": 10,
 "parityshard": 3,
 "dscp": 46,
-"nocomp": true,
+"nocomp": false,
 "acknodelay": false,
 "nodelay": 1,
 "interval": 10,
